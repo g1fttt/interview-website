@@ -1,0 +1,72 @@
+body {
+  display: flex;
+  flex-direction: row;
+}
+
+#motto-section {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  & * {
+    margin-left: 15%;
+  }
+
+  &>div h1 {
+    margin: 0;
+  }
+
+  &>h4 {
+    margin-top: 64px;
+    margin-bottom: 16px;
+
+    width: 70%;
+  }
+
+  &>a {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+
+    width: 211px;
+    height: 48px;
+
+    transition: var(--transition-time);
+    background: var(--color-button-background-special);
+    box-shadow: var(--button-shadow-special);
+    cursor: pointer;
+    text-decoration: none;
+
+    border: none;
+    border-radius: var(--border-radius);
+
+    &:hover {
+      scale: var(--hover-scale);
+    }
+    
+    &:active {
+      filter: var(--active-brightness);
+    }
+  }
+}
+
+#hero-section {
+  &>#fill-frame {
+    height: 100vh;
+
+    --width: 100%;
+    min-width: var(--width);
+    max-width: var(--width); 
+
+    overflow: hidden;
+
+    &>img {
+      width: 100%;
+      height: 100%;
+      
+      object-fit: cover;
+    }
+  }
+}

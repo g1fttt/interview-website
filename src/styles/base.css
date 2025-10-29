@@ -1,0 +1,60 @@
+:root {
+  --font-size-base: 19px;
+  --font-size-mod: 1.333;
+
+  --h4-font-size: var(--font-size-base);
+  --h3-font-size: calc(var(--h4-font-size) * var(--font-size-mod));
+  --h2-font-size: calc(var(--h3-font-size) * var(--font-size-mod));
+  --h1-font-size: calc(var(--h2-font-size) * var(--font-size-mod));
+
+  --color-text: black;
+  --color-button-background-special: linear-gradient(76deg, #D5BDAF 0%, #D6CCC2 100%);
+
+  --button-shadow-special: 0 -1px 4px 0 rgba(0, 0, 0, 0.25) inset,
+                   1px 1px 4px 0 rgba(0, 0, 0, 0.25);
+
+  --transition-time: 350ms;
+  --border-radius: 10px;
+  --hover-scale: 105%;
+  --active-brightness: brightness(80%);
+}
+
+body,
+html {
+  margin: 0;
+  height: 100vh;
+
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+}
+
+h4,
+h3,
+h2,
+a {
+  font-family: "Inter";
+  font-weight: 400;
+
+  color: var(--color-text);
+}
+
+h4,
+button {
+  font-size: var(--h4-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h1 {
+  font-family: "Roboto";
+  font-weight: 600;
+  font-size: var(--h1-font-size);
+
+  color: var(--color-text);
+}
