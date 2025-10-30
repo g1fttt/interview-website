@@ -1,0 +1,118 @@
+.container {
+  display: grid;
+
+  height: 100vh;
+
+  grid-template-columns: 340px 0 auto 0;
+  grid-template-rows: 93px 0 auto 0;
+  grid-template-areas:
+    "side head head head"
+    "side body body body"
+    "side body body body";
+
+  &>.side-bar {
+    grid-area: side;
+
+    border: var(--section-border);
+    /* Border in the right */
+    border-style: none solid none none;
+
+    background-color: var(--color-side-bar-background);
+
+    & * {
+      /* top right bottom left */
+      margin: 0 0 0 32px;
+      padding: 0;
+    }
+
+    &>#organization-name {
+      font-family: "Roboto";
+      font-weight: 600;
+
+      margin-top: 54px;
+      margin-bottom: 48px;
+    }
+
+    & .page-link {
+      display: block;
+      text-decoration: none;
+
+      font-size: var(--h3-font-size);
+      font-weight: 500;
+
+      margin-bottom: 32px;
+      padding-left: 48px;
+
+      transition: var(--transition-time);
+      opacity: 80%;
+
+      &:hover {
+        scale: var(--hover-scale);
+      }
+    }
+  }
+
+  &>.top-bar {
+    grid-area: head;
+
+    border: var(--section-border);
+    /* Border at the bottom */
+    border-style: none none solid none;
+  }
+
+  &>.body {
+    display: grid;
+
+    grid-area: body;
+    grid-template-columns: auto 60%;
+    grid-template-rows: 55% auto;
+    grid-template-areas:
+      "article video"
+      "materials description";
+
+    padding-right: 32px;
+    padding-bottom: 32px;
+
+    & .body-section {
+      margin-top: 32px;
+      margin-left: 16px;
+
+      height: auto;
+      width: auto;
+
+      border: var(--section-border);
+      border-radius: var(--border-radius);
+      border-style: solid;
+
+      &>.section-name {
+        margin-top: 16px;
+        margin-left: 16px;
+      }
+    }
+
+    &>#description-section {
+      grid-area: description;
+    }
+
+    &>#video-section {
+      grid-area: video;
+
+      overflow: hidden;
+
+      &>iframe {
+        width: 100%;
+        height: 100%;
+
+        border: none;
+      }
+    }
+
+    &>#materials-section {
+      grid-area: materials;
+    }
+
+    &>#article-section {
+      grid-area: article;
+    }
+  }
+}

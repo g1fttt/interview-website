@@ -8,10 +8,13 @@
   --h1-font-size: calc(var(--h2-font-size) * var(--font-size-mod));
 
   --color-text: black;
+  --color-side-bar-background: #F8F8F8;
+  --color-border: #EDEDE9;
   --color-button-background-special: linear-gradient(76deg, #D5BDAF 0%, #D6CCC2 100%);
 
   --button-shadow-special: 0 -1px 4px 0 rgba(0, 0, 0, 0.25) inset,
                    1px 1px 4px 0 rgba(0, 0, 0, 0.25);
+  --section-border: 2px var(--color-border);
 
   --transition-time: 350ms;
   --border-radius: 10px;
