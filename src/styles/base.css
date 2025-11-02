@@ -2,6 +2,7 @@
   --font-size-base: 19px;
   --font-size-mod: 1.333;
 
+  --p-font-size: calc(var(--font-size-base) / var(--font-size-mod));
   --h4-font-size: var(--font-size-base);
   --h3-font-size: calc(var(--h4-font-size) * var(--font-size-mod));
   --h2-font-size: calc(var(--h3-font-size) * var(--font-size-mod));
@@ -34,11 +35,18 @@ html {
 h4,
 h3,
 h2,
+p,
 a {
   font-family: "Inter";
   font-weight: 400;
 
   color: var(--color-text);
+}
+
+p {
+  font-size: var(--p-font-size);
+  
+  line-height: 1.5;
 }
 
 h4,
