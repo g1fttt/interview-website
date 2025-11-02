@@ -3,9 +3,7 @@
 
   height: 100vh;
 
-  --max-singular-column-height: 340px;
-
-  grid-template-columns: var(--max-singular-column-height) 0 auto;
+  grid-template-columns: 340px 0 auto;
   grid-template-rows: 93px 0;
   grid-template-areas:
     "side head head"
@@ -69,6 +67,8 @@
       "transcription article"
       "description article";
 
+    max-height: 85vh;
+
     padding-right: 16px;
     padding-bottom: 16px;
 
@@ -103,6 +103,7 @@
         position: sticky;
         top: 0;
 
+        padding-top: 0;
         padding-bottom: 8px;
 
         border: var(--section-border);
@@ -114,6 +115,12 @@
           margin-left: var(--inner-indent);
           margin-bottom: 0;
         }
+      }
+
+      & h4 {
+        margin-left: var(--inner-indent);
+        margin-top: 8px;
+        margin-bottom: 0;
       }
 
       & p {
@@ -142,22 +149,28 @@
       }
     }
 
-    &>#description-section {
-      grid-area: description;
-    }
-
     &>#transcription-section {
       grid-area: transcription;
 
-      max-height: var(--max-singular-column-height);
+      /* max-height: var(--max-singular-column-height); */
 
       & div p:last-of-type {
         margin-top: 0;
       }
     }
 
+    &>#description-section {
+      grid-area: description;
+    }
+
     &>#article-section {
       grid-area: article;
+
+      /* max-height: calc(var(--max-singular-column-height) * 1.89); */
+
+      & p {
+        margin-bottom: 16px;
+      }
     }
   }
 }
