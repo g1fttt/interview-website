@@ -59,7 +59,8 @@
       "transcription article"
       "description article";
 
-    height: 98vh;
+    /* A bit hacky, but might be ok on 16:9 screens */
+    height: 95vh;
 
     padding-right: 16px;
     padding-bottom: 16px;
@@ -82,8 +83,12 @@
       border-radius: var(--border-radius);
       border-style: solid;
 
-      overscroll-behavior: none;
-      overflow: auto;
+      overflow: hidden;
+
+      &>.section-inner-container {
+        overscroll-behavior: none;
+        overflow: auto;
+      }
 
       /* Style properties for article-section title exclusively */
       &>.section-title-container>.section-name {
@@ -109,17 +114,14 @@
         }
       }
 
-      & h4 {
+      & h4,
+      p {
         margin-left: var(--inner-indent);
         margin-top: 8px;
         margin-bottom: 0;
       }
 
       & p {
-        margin-left: var(--inner-indent);
-        margin-top: 8px; 
-        margin-bottom: 0;
-
         padding-right: 8px;
       }
 
