@@ -12,20 +12,20 @@ body {
     margin-left: 15%;
   }
 
-  &>#motto-container h1 {
+  & > #motto-container h1 {
     margin: 0;
   }
 
-  &>h4 {
+  & > h4 {
     margin-top: 64px;
     margin-bottom: 16px;
 
     width: 70%;
   }
 
-  &>a {
+  & > a {
     display: flex;
-    
+
     justify-content: center;
     align-items: center;
 
@@ -44,7 +44,7 @@ body {
     &:hover {
       scale: var(--hover-scale);
     }
-    
+
     &:active {
       filter: var(--active-brightness);
     }
@@ -52,19 +52,19 @@ body {
 }
 
 #hero-section {
-  &>#fill-frame {
+  & > #fill-frame {
     height: 100vh;
 
     --width: 100%;
     min-width: var(--width);
-    max-width: var(--width); 
+    max-width: var(--width);
 
     overflow: hidden;
 
-    &>img {
+    & > img {
       width: 100%;
       height: 100%;
-      
+
       object-fit: cover;
     }
   }

@@ -9,7 +9,7 @@
     "side body body"
     "side body body";
 
-  &>.side-bar {
+  & > .side-bar {
     grid-area: side;
 
     padding-left: 32px;
@@ -19,7 +19,7 @@
 
     background-color: var(--color-side-bar-background);
 
-    &>#organization-name {
+    & > #organization-name {
       font-family: "Roboto";
       font-weight: 600;
 
@@ -49,7 +49,7 @@
     }
   }
 
-  &>.body {
+  & > .body {
     display: grid;
 
     grid-area: body;
@@ -85,13 +85,13 @@
 
       overflow: hidden;
 
-      &>.section-inner-container {
+      & > .section-inner-container {
         overscroll-behavior: none;
         overflow: auto;
       }
 
       /* Style properties for article-section title exclusively */
-      &>.section-title-container>.section-name {
+      & > .section-title-container > .section-name {
         margin-top: var(--inner-indent);
       }
 
@@ -108,7 +108,7 @@
 
         background-color: white;
 
-        &>.section-name {
+        & > .section-name {
           margin-left: var(--inner-indent);
           margin-bottom: 0;
         }
@@ -125,7 +125,7 @@
         padding-right: 8px;
       }
 
-      &>#article-section-title-container {
+      & > #article-section-title-container {
         display: flex;
 
         align-items: center;
@@ -135,7 +135,7 @@
           margin-top: var(--inner-indent);
         }
 
-        &>audio {
+        & > audio {
           height: 30px;
 
           max-width: 400px;
@@ -146,7 +146,7 @@
       }
     }
 
-    &>#transcription-section {
+    & > #transcription-section {
       grid-area: transcription;
 
       & div p:last-of-type {
@@ -154,11 +154,11 @@
       }
     }
 
-    &>#description-section {
+    & > #description-section {
       grid-area: description;
     }
 
-    &>#article-section {
+    & > #article-section {
       grid-area: article;
 
       & p {
