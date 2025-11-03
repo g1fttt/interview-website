@@ -3,10 +3,9 @@
 
   height: 100vh;
 
-  grid-template-columns: 340px 0 auto;
-  grid-template-rows: 93px 0;
+  grid-template-columns: 340px auto auto;
+  grid-template-rows: 93px auto;
   grid-template-areas:
-    "side head head"
     "side body body"
     "side body body";
 
@@ -50,13 +49,6 @@
     }
   }
 
-  &>.top-bar {
-    grid-area: head;
-
-    border: var(--section-border);
-    border-bottom-style: solid;
-  }
-
   &>.body {
     display: grid;
 
@@ -67,7 +59,7 @@
       "transcription article"
       "description article";
 
-    max-height: 85vh;
+    height: 98vh;
 
     padding-right: 16px;
     padding-bottom: 16px;
@@ -144,6 +136,9 @@
         &>audio {
           height: 30px;
 
+          max-width: 400px;
+          min-width: 150px;
+
           border-radius: var(--border-radius);
         }
       }
@@ -151,8 +146,6 @@
 
     &>#transcription-section {
       grid-area: transcription;
-
-      /* max-height: var(--max-singular-column-height); */
 
       & div p:last-of-type {
         margin-top: 0;
@@ -165,8 +158,6 @@
 
     &>#article-section {
       grid-area: article;
-
-      /* max-height: calc(var(--max-singular-column-height) * 1.89); */
 
       & p {
         margin-bottom: 16px;
